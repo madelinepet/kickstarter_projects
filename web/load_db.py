@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 
-csv_data = pd.read_csv('./assets/winemag-data-130k-v2.csv')
+csv_data = pd.read_csv('./assets/ks-projects-201612.csv')
 df = pd.DataFrame(csv_data)
 
 # Adjust NaN values in each column, and generally clean data set
