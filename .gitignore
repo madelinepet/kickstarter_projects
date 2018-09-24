@@ -1,7 +1,40 @@
+*.egg
+*.egg-info
+*.pyc
+*$py.class
+*~
+.coverage
+coverage.xml
+build/
+dist/
+.tox/
+nosetests.xml
+env*/
+tmp/
+Data.fs*
+*.sublime-project
+*.sublime-workspace
+.*.sw?
+.sw?
+.DS_Store
+coverage
+test
+
+Source: https://github.com/github/gitignore/blob/master/Python.gitignore
+
+# User generated
+ENV/
+.env
+.vscode
+.idea
+.DS_Store
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+.pytest_cache/
 
 # C extensions
 *.so
@@ -45,7 +78,6 @@ nosetests.xml
 coverage.xml
 *.cover
 .hypothesis/
-.pytest_cache/
 
 # Translations
 *.mo
@@ -53,8 +85,9 @@ coverage.xml
 
 # Django stuff:
 *.log
+.static_storage/
+.media/
 local_settings.py
-db.sqlite3
 
 # Flask stuff:
 instance/
@@ -102,3 +135,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# data
+curriculum/class-06/API_NY.GDP.PCAP.CD_DS2_en_csv_v2.csv
