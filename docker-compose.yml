@@ -7,7 +7,7 @@ services:
   web:
     env_file: .env
     build: ./web
-    container_name: 'kickstarter_projects'
+    container_name: 'kickstarter_project'
     command: ./entrypoint.sh
     volumes:
       - ./web:/src
