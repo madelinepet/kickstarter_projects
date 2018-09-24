@@ -1,2 +1,4 @@
 from django.contrib import admin
-from .models import review
+from .models import Kickstarter
+
+admin.site.register(Kickstarter)
