@@ -33,7 +33,7 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split()
 INSTALLED_APPS = [
     'django.contrib.admin',
     'kickstarter_project',
-    'kickstarter_app',
+    'project_data',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
