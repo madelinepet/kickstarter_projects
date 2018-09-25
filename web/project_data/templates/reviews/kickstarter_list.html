@@ -3,9 +3,10 @@
 {% block content %}
 <h2>Welcome to the site! Check out our kickstarters!</h2>
 
+
 <div class="pagination">
     <span class="step-links">
-        {% if contacts.has_previous %}
+        {% if kickstarters.has_previous %}
             <a href="?page=1">&laquo; first</a>
             <a href="?page={{ kickstarters.previous_page_number }}">previous</a>
         {% endif %}
@@ -23,7 +24,7 @@
 
 {% for kickstarter in kickstarters %}
 <a href="{% url "kickstarter_detail" pk=kickstarter.id %}">
-    <h3>({{ kickstarter.name }} pts){{ kickstarter.title }}</h3>
+    <h3>({{ kickstarter.name }}){{ kickstarter.category }}</h3>
 </a>
 {% endfor %}
 {% endblock content %}
