@@ -3,11 +3,13 @@ import pandas as pd
 import os
 
 
-csv_data = pd.read_csv('./assets/ks-projects-201801.csv')
+csv_data = pd.read_csv('./assets/ks-projects-201801.csv', error_bad_lines=False)
 df = pd.DataFrame(csv_data)
 
 # Adjust NaN values in each column, and generally clean data set
-df['ID'] = df['ID'].fillna(-1)
+df['id_data'] = df['ID'].fillna(0)
+del df['ID']
+
 df['name'] = df['name'].fillna('unknown')
 df['category'] = df['category'].fillna('unknown')
 df['main_category'] = df['main_category'].fillna('unknown')
@@ -19,7 +21,8 @@ df['pledged'] = df['pledged'].fillna(0.0)
 df['state'] = df['state'].fillna('unknown')
 df['backers'] = df['backers'].fillna(0)
 df['country'] = df['country'].fillna('unknown')
-df['usd pledged'] = df['usd pledged'].fillna(0.0)
+df['usd_pledged'] = df['usd pledged'].fillna(0.0)
+del df['usd pledged']
 df['usd_pledged_real'] = df['usd_pledged_real'].fillna(0.0)
 df['usd_goal_real'] = df['usd_goal_real'].fillna(0.0)
 
@@ -34,4 +37,4 @@ engine = create_engine('{}://{}:{}@{}:5432/{}'.format(
     db_protocol, db_user, db_password, db_host, db_name
 ))
 
-df.to_sql("project_data_project", engine, if_exists='append', index=False)
+df.to_sql("project_data_kickstarter", engine, if_exists='append', index=False)

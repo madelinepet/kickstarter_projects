@@ -1,30 +1,28 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
-<h2>Welcome to the site! Check out our kickstarters!</h2>
-
-
+<h2>Welcome to the site! Check out our reviews!</h2>
 <div class="pagination">
-    <span class="step-links">
-        {% if kickstarters.has_previous %}
-            <a href="?page=1">&laquo; first</a>
-            <a href="?page={{ kickstarters.previous_page_number }}">previous</a>
-        {% endif %}
+  <span class="step-links">
+    {% if kickerstarters.has_previous %}
+      <a href="?page=1">&laquo; first</a>
+      <a href="?page={{ kickerstarters.previous_page_number }}">previous</a>
+    {% endif %}
 
-        <span class="current">
-            Page {{ kickstarters.number }} of {{ kickstarters.paginator.num_pages }}.
-        </span>
-
-        {% if contacts.has_next %}
-            <a href="?page={{ kickstarters.next_page_number }}">next</a>
-            <a href="?page={{ kickstarters.paginator.num_pages }}">last &raquo;</a>
-        {% endif %}
+    <span class="current">
+      Page {{ kickerstarters.number }} of {{ kickerstarters.paginator.num_pages }}.
     </span>
+
+    {% if kickerstarters.has_next %}
+      <a href="?page={{ kickerstarters.next_page_number }}">next</a>
+      <a href="?page={{ kickerstarters.paginator.num_pages }}">last &raquo;</a>
+    {% endif %}
+  </span>
 </div>
 
-{% for kickstarter in kickstarters %}
-<a href="{% url "kickstarter_detail" pk=kickstarter.id %}">
-    <h3>({{ kickstarter.name }}){{ kickstarter.category }}</h3>
+{% for kickstarter in kickerstarters %}
+<a href="{% url 'kickstarter_detail' pk=kickstarter.id %}">
+  <h3>({{ kickstarter.name }}){{ kickstarter.category }}</h3>
 </a>
 {% endfor %}
 {% endblock content %}
