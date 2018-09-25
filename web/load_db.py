@@ -19,7 +19,7 @@ df['pledged'] = df['pledged'].fillna(0.0)
 df['state'] = df['state'].fillna('unknown')
 df['backers'] = df['backers'].fillna(0)
 df['country'] = df['country'].fillna('unknown')
-df['usd_pledged'] = df['usd_pledged'].fillna(0.0)
+df['usd pledged'] = df['usd pledged'].fillna(0.0)
 df['usd_pledged_real'] = df['usd_pledged_real'].fillna(0.0)
 df['usd_goal_real'] = df['usd_goal_real'].fillna(0.0)
 
