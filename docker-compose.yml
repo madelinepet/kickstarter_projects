@@ -5,17 +5,15 @@ services:
     image: postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-    ports:
-      - "5432:5432"
 
   web:
     env_file: .env
     build: ./web
     command: ./entrypoint.sh
     volumes:
-      - ./web:/src
+        - ./web:/src
     ports:
-      - "8000:8000"
+        - "8000:8000"
     depends_on:
       - db
 
