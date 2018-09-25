@@ -1,17 +1,15 @@
 from django.db import models
 
 
-# Create your models here.
 class Kickstarter(models.Model):
-
     ID = models.CharField(max_length=1024)
     name = models.CharField(max_length=1024)
     category = models.CharField(max_length=1024)
     main_category = models.CharField(max_length=1024)
     currency = models.CharField(max_length=1024)
-    deadline = models.DateTimeField(blank=True)
+    deadline = models.CharField(max_length=1024)
     goal = models.FloatField()
-    launched = models.DateTimeField(blank=True)
+    launched = models.CharField(max_length=1024)
     pledged = models.FloatField()
     state = models.CharField(max_length=1024)
     backers = models.IntegerField()
@@ -21,4 +19,7 @@ class Kickstarter(models.Model):
     usd_goal_real = models.FloatField()
 
     def __str__(self):
-        return '{}'.format(self.title)
+        return f'ID: {self.id} ({self.name}) | Category: {self.category} | Main Category: {self.main_category} | Currency: {self.currency} | Deadline: {self.deadline} | Goal: {self.goal} | Launched: {self.launched} | Pledged: {self.pledged} | State: {self.state} | Backers: {self.backers} | Country: {self.country} | USD Pledged: {self.usd_pledged} | Real USD Pledged: {self.usd_pledged_real} | Real USD Goal: {self.usd_goal_real}'
+
+    def __repr__(self):
+        return f'ID: {self.id} ({self.name}) | Category: {self.category} | Main Category: {self.main_category} | Currency: {self.currency} | Deadline: {self.deadline} | Goal: {self.goal} | Launched: {self.launched} | Pledged: {self.pledged} | State: {self.state} | Backers: {self.backers} | Country: {self.country} | USD Pledged: {self.usd_pledged} | Real USD Pledged: {self.usd_pledged_real} | Real USD Goal: {self.usd_goal_real}'

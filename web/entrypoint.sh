@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# python3 manage.py collectstatic --noinput && \
 set -e
 cd /src
 python3 manage.py makemigrations --noinput && \
