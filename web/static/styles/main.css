@@ -1,6 +1,5 @@
 * {
   position: static;
-  display: block;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -18,5 +17,46 @@
 form *:focus {
   border: none;
   outline: none; }
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #75b2ba; }
+
+header {
+  background-color: #333333;
+  font-size: 36px;
+  text-align: center;
+  height: 80px;
+  color: white; }
+
+header {
+  font-size: 32px; }
+
+nav {
+  display: block; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #070102; }
+
+li {
+  float: left; }
+
+li a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none; }
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #432bcc; }
+
+main {
+  margin: 20px;
+  font-size: 16px; }
 
 /*# sourceMappingURL=main.css.map */
