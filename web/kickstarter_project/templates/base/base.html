@@ -13,7 +13,7 @@
     <h1>Kickstarter</h1>
     <nav>
       <ul>
-        <li><a href="{% url "home" %}">Home</a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
       </ul>
     </nav>
   </header>
@@ -21,7 +21,7 @@
   <main>
     {% block content  %}
     <h3> No Content</h3>
-    {% endblock  %}
+    {% endblock content %}
   </main>
 
 </body>
