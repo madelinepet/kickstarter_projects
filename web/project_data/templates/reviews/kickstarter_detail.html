@@ -2,6 +2,17 @@
 
 {% block content %}
 <h2>Welcome to the detail page</h2>
- <h3>{{ kickstarter.name }}</h3>
-<p>{{ kickstarter.category }}</p> 
+<h3>{{ kickstarter.name }}</h3>
+<h4>Category: {{ kickstarter.category }}</h4>
+<h4>Currency: {{ kickstarter.currency }}</h4>
+<h4>Deadline: {{ kickstarter.deadline }}</p>
+<h4>Goal: {{ kickstarter.goal_real }}</h4>
+<h4>Launched: {{ kickstarter.launched }}</h4>
+<h4>Pledged: {{ kickstarter.pledged }}</h4>
+<h4>State: {{ kickstarter.state }}</h4>
+<h4>Backers: {{ kickstarter.backers }}</h4>
+<h4>Country: {{ kickstarter.country }}</h4>
+<h4>Amount Pledged: {{ kickstarter.usd_pledged_real }}</h4>
+<h4>Backers: {{ kickstarter.backers }}</h4>
+
 {% endblock content %}
