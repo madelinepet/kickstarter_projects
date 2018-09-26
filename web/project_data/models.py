@@ -19,7 +19,11 @@ class Kickstarter(models.Model):
     usd_goal_real = models.FloatField()
 
     def __str__(self):
+        """ Returns a string representation of the Kickstarter class
+        """
         return f'Name:  ({self.name})'
 
     def __repr__(self):
+        """ Returns a technical representation of the Kickstarter class
+        """
         return f'Name:  ({self.name})'
