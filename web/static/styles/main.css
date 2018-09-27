@@ -20,17 +20,15 @@ form *:focus {
 
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #75b2ba; }
+  background-color: #85ba94; }
 
 header {
-  background-color: #333333;
+  background-image: url("../kickstarter.jpg");
   font-size: 36px;
   text-align: center;
-  height: 80px;
+  padding: 30px;
+  height: 120px;
   color: white; }
-
-header {
-  font-size: 32px; }
 
 nav {
   display: block; }
@@ -43,7 +41,8 @@ ul {
   background-color: #070102; }
 
 li {
-  float: left; }
+  float: left;
+  padding: 10px; }
 
 li a {
   color: white;
@@ -53,10 +52,25 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-  background-color: #432bcc; }
+  background-color: #1521cc; }
 
 main {
   margin: 20px;
-  font-size: 16px; }
+  font-size: 16px;
+  text-align: center; }
+
+main a {
+  padding: 5px;
+  text-align: center; }
+
+main h2 {
+  padding-bottom: 20px; }
+
+h2 {
+  text-align: center;
+  font-size: 32px; }
+
+.pagination {
+  padding: 20px; }
 
 /*# sourceMappingURL=main.css.map */
