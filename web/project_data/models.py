@@ -2,6 +2,9 @@ from django.db import models
 
 
 class Kickstarter(models.Model):
+    """ A class represnting kickstarter data from a csv file from kaggle with
+    corresponding attributes
+    """
     id_data = models.IntegerField()
     name = models.CharField(max_length=1024)
     category = models.CharField(max_length=1024)
